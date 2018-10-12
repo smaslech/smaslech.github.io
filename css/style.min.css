@@ -163,24 +163,41 @@ a,a:hover,a:visited,a:focus {
     transition: 0s,opacity 0s;
 }
 
-.button:hover:before {
-    content: 'Copy';
-    opacity: 100;
+@media only screen and (min-width: 831px) {
+    .button:hover:before {
+        content: 'Copy';
+        opacity: 100;
+    }
+
+    .button:active:before {
+        content: 'Copied!';
+        opacity: 100;
+    }
+
+    .button:hover span,
+    .button:active span {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+    }
 }
 
-.button:active:before {
-    content: 'Copied!';
-    opacity: 100;
-}
-
-.button:hover span,
-.button:active span {
-    opacity: 0;
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-    transform: scale(0);
+@media only screen and (max-width: 830px) {
+    .button:active:before {
+        content: 'Copied!';
+        opacity: 100;
+    }
+    .button:active span {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+    }
 }
 
 .wrap {
@@ -428,7 +445,20 @@ a,a:hover,a:visited,a:focus {
     }
 
     .bottomnav {
-        display: block;
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 3000;
+        color: #fff;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: flex-end;
+        text-align: right;
+        vertical-align: baseline;
+        padding: 0 3% 5% 3%;
+        mix-blend-mode: difference;
     }
     .slider .gallery_cell img.content#mobile {
         height: 80%;
@@ -438,11 +468,16 @@ a,a:hover,a:visited,a:focus {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding: 1.75% 3% 0 3%;
+    }
+    .modal {
+        padding: 1.75% 3% 5% 3%;
     }
     .modal-bottom {
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
+        padding: 0 3% 5% 3%;
     }
     .album .caption {
         display: none; 
@@ -500,22 +535,6 @@ a.modal-link:hover {
 button#myBtn:hover {
     font-family: "Favorit" !important;
 }
-
-.bottomnav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 3000;
-    color: #fff;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
-    text-align: right;
-    vertical-align: baseline;
-    padding: 0 2.25% 1.25% 2.25%;
-    mix-blend-mode: difference;
-}
-
 
 
 /* -----ALBUM NAV CURSOR----- */

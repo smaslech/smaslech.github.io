@@ -74,7 +74,7 @@ button {
     font-weight: normal;
     font-style: normal;
     src:  url("assets/favorit-regular-lining.eot") format("embedded-opentype");
-    src: url("assets/FavoritLining-Regular.woff2") format("woff2");
+    src: url("assets/FavoritLining-Regular.woff2") format("woff2"), url("assets/FavoritLining-Regular.woff") format("woff");
 }
 
 *,*:after,*:before {

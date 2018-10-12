@@ -107,7 +107,7 @@
   background-position: top left;
 }
 .book-front1 {
-  background-image: url('../images/book-cover.jpg');
+  background-image: url('assets/boockup/book-cover.jpg');
   width: 320.33px;
   height: 571.65px;
   -webkit-transform: translate3d(-160.165px ,-285.825px ,0.2575px) translate3d(0,0,0) rotateY(0deg);
@@ -115,7 +115,7 @@
 }
 
 .book-front2 {
-  background-image: url('../images/book-back.jpg');
+  background-image: url('assets/boockup/book-back.jpg');
   width: 320.33px;
   height: 571.65px;
   -webkit-transform: translate3d(-160.165px ,-285.825px ,0.2575px) translate3d(0,0,0) rotateY(0deg);
@@ -123,21 +123,21 @@
 }
 
 .book-side-left {
-  background-image: url('../images/book-spine.jpg');
+  background-image: url('assets/boockup/book-spine.jpg');
   width: 0.515px;
   height: 571.65px;
   -webkit-transform: translate3d(-160.165px ,-285.825px ,0.2575px) translate3d(-0.2575px, 0, -0.2575px) rotateY(-90deg);
   transform: translate3d(-160.165px ,-285.825px ,0.2575px) translate3d(-0.2575px, 0, -0.2575px) rotateY(-90deg);
 }
 .book-side-right {
-  background-image: url('../images/book-side.jpg');
+  background-image: url('assets/boockup/book-side.jpg');
   width: 0.515px;
   height: 571.65px;
   -webkit-transform: translate3d(-160.165px ,-285.825px ,0.2575px) translate3d(320.0725px, 0px,-0.2575px) rotateY(90deg);
   transform: translate3d(-160.165px ,-285.825px ,0.2575px) translate3d(320.0725px, 0px,-0.2575px) rotateY(90deg);
 }
 .book-top {
-  background-image: url('../images/book-top.jpg');
+  background-image: url('assets/boockup/book-top.jpg');
   background-position: bottom right;
   width: 320.33px;
   height: 0.515px;
@@ -145,21 +145,21 @@
   transform: translate3d(-160.165px, -285.825px ,0.2575px) translate3d(0px, -0.2575px, -0.2575px) rotateX(90deg);
 }
 .book-bottom {
-  background-image: url('../images/book-top.jpg');
+  background-image: url('assets/boockup/book-top.jpg');
   width: 320.33px;
   height: 0.515px;
   -webkit-transform: translate3d(-160.165px ,-285.825px ,0.2575px) translate3d(0px, 571.3924999999999px, -0.2575px) rotateX(-90deg);
   transform: translate3d(-160.165px ,-285.825px ,0.2575px) translate3d(0px, 571.3924999999999px, -0.2575px) rotateX(-90deg);
 }
 .book-back1 {
-  background-image: url('../images/book-back.jpg');
+  background-image: url('assets/boockup/book-back.jpg');
   width: 320.33px;
   height: 571.65px;
   -webkit-transform: translate3d(-160.165px ,-285.825px ,0.2575px) translate3d(0,0, -0.515px) rotateY(180deg);
   transform: translate3d(-160.165px ,-285.825px ,0.2575px) translate3d(0,0, -0.515px) rotateY(180deg);
 }
 .book-back2 {
-  background-image: url('../images/book-cover.jpg');
+  background-image: url('assets/boockup/book-cover.jpg');
   width: 320.33px;
   height: 571.65px;
   -webkit-transform: translate3d(-160.165px ,-285.825px ,0.2575px) translate3d(0,0, -0.515px) rotateY(180deg);

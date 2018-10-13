@@ -425,8 +425,8 @@ a,a:hover,a:visited,a:focus {
         width: auto;
     }
     .slider .gallery_cell img.content.mh100 {
-        height: 100%;
-        width: auto;
+        min-height: 100%;
+        min-width: 100%;
     }
     .slider .gallery_cell img.content.mh50 {
         height: 50%;

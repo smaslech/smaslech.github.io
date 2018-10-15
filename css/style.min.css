@@ -63,7 +63,6 @@ button {
 
 @font-face {
     font-family: "Favorit";
-    font-weight: normal;
     font-style: normal;
     src: url("assets/favorit-regular.eot") format("embedded-opentype");
     src: url("assets/Favorit-Regular.woff2") format("woff2"), url("assets/Favorit-Regular.woff") format("woff");
@@ -71,10 +70,15 @@ button {
 
 @font-face {
     font-family: "Lining";
-    font-weight: normal;
     font-style: normal;
     src:  url("assets/favorit-regular-lining.eot") format("embedded-opentype");
     src: url("assets/FavoritLining-Regular.woff2") format("woff2"), url("assets/FavoritLining-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Light";
+    font-style: normal;
+    src: url("assets/Favorit_Light.woff") format("woff");
 }
 
 *,*:after,*:before {
@@ -223,7 +227,7 @@ a,a:hover,a:visited,a:focus {
 
 @media only screen and (min-width: 831px) {
     .wrap, .modal{
-        font-size:1.8em;
+        font-size:1.4em;
         line-height: 1.2em;
     }
 }
@@ -288,7 +292,7 @@ a,a:hover,a:visited,a:focus {
 }
 
 .modal-content {
-    width: calc(50% - .75%);
+    width: calc(50% - 2.25%);
 }
 
 .modal-bottom {
@@ -332,6 +336,11 @@ a,a:hover,a:visited,a:focus {
 .flickity-enabled.is-draggable .flickity-viewport,.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
     cursor: default
 }
+
+.is-selected p {
+    display: none;
+}
+
 
 .slider {
     -webkit-transform-style: preserve-3d;
@@ -402,8 +411,7 @@ a,a:hover,a:visited,a:focus {
         width: 100%;
     }
     .slider .gallery_cell img.content.h70{
-        height: 70%;
-        width: auto;
+        max-height: 70%;
     }
     .slider .gallery_cell img.content#mobile, .bottomnav {
         display: none;
@@ -417,7 +425,7 @@ a,a:hover,a:visited,a:focus {
         max-height: 100%
     }
     .slider .gallery_cell img.content#mw100 {
-        height: auto;
+        max-height: none;
         width: 100%;
     } 
     .slider .gallery_cell img.content.w100.mh60 {
@@ -425,8 +433,7 @@ a,a:hover,a:visited,a:focus {
         width: auto;
     }
     .slider .gallery_cell img.content.mh100 {
-        min-height: 100%;
-        min-width: 100%;
+        height: 100%;
     }
     .slider .gallery_cell img.content.mh50 {
         height: 50%;
@@ -505,10 +512,11 @@ a,a:hover,a:visited,a:focus {
     width: 100%;
     z-index: 3000;
     color: #fff;
-    display: block;
+    display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
     text-align: left;
     font-weight: inherit;
     font-style: inherit;
@@ -518,8 +526,16 @@ a,a:hover,a:visited,a:focus {
     mix-blend-mode: difference;
 }
 
-.caption:hover {
-    mix-blend-mode: hard-light;
+span#credits {
+    line-height: 2em;
+    font-family: 'Light';
+    text-transform: uppercase;
+    font-size: .35em;
+}
+
+
+.caption a:hover {
+    mix-blend-mode: difference;
 }
 
 a.modal-link:hover {
@@ -657,11 +673,11 @@ button#myBtn:hover {
         display: none;
     }
     .modal-content {
-        width: calc(66% - .75%);
+        width: calc(66% - 2.25%);
     }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 830px) {
     .modal-content {
         width: 100%;
     }

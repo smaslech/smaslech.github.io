@@ -454,6 +454,12 @@ a,a:hover,a:visited,a:focus {
         background-repeat:no-repeat;
         background-position: center;
     }
+    source#desktop {
+        display: block;
+    }
+    source#mobile {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -492,6 +498,12 @@ a,a:hover,a:visited,a:focus {
         background-size: cover;
         background-repeat:no-repeat;
         background-position: center;
+    }
+    source#desktop {
+        display: none;
+    }
+    source#mobile {
+        display: block;
     }
     .bottomnav {
         display: flex;
@@ -536,23 +548,10 @@ a,a:hover,a:visited,a:focus {
     }
 
     video.website {
-        border-radius: 5px;
+        border-radius: 3px;
         box-shadow: 10px 10px 30px black;
         /*background: #ccc;
         padding-top: .6rem;*/
-    }
-    video.centered {
-        max-height: calc(100% - 2rem);
-        max-width: calc(100% - 2rem);
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    video.website {
-        border-radius: 5px;
-        box-shadow: 10px 10px 30px black;
-        /*background: #ccc;
-        padding-top: .4rem;*/
     }
     video.centered {
         max-height: calc(100% - 2rem);

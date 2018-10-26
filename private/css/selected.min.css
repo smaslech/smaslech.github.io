@@ -56,14 +56,6 @@ span#page {
 
 /*------------------------------------*/
 
-.wrap {
-    opacity: 0;
-    /*transition: all 0.2s ease-out;*/
-}
-
-.wrap.ready {
-    opacity: 1;
-}
 
 header {
 	margin: 0 auto;

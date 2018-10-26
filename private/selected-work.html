@@ -24,6 +24,7 @@
 <body class="album">        
     
     <div class="wrap" id="myContainer">
+        <div class="loader"></div>
             
         <div class="topnav">
             <div class="logo" style="padding-left: 0;"><a href="http://sarahmaslechko.work">SARAH&nbsp;MASLECHKO</a></div>
@@ -300,7 +301,7 @@
             <p>In the meantime, you can view my public portfolio @ <span><a style="font-family: 'Lining'" href="http://sarahmaslechko.work">SARAHMASLECHKO.WORK</a></span></p>
         </div>
         <div class="modal-bottom">
-            <p>Updated 10/24/18 11<span class="blinking-cursor-2">:</span>46 PM</p><br/><p>©2018</p>
+            <p>Updated 10/24/18 11<span class="blinking-cursor">:</span>46 PM</p><br/><p>©2018</p>
         </div>
     </div>
 
@@ -341,10 +342,6 @@
         $(document).ready(function(){
             $('html').animate({scrollTop:0}, 1);
             $('body').animate({scrollTop:0}, 1);
-        });
-
-        $(window).on('load',function(){ 
-            $('.wrap').addClass('ready');
         });
     </script>
 

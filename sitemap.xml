@@ -4,12 +4,88 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
 <url>
   <loc>http://sarahmaslechko.work/</loc>
-  <lastmod>2018-10-26T19:43:49+00:00</lastmod>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/helsinki/helsinki-poster-sarah-maslechko-01.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/52/52-posters-sarah-maslechko-group-01.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/52/52-posters-sarah-maslechko-group-02.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/bmw/bmw-the-escape-posters-sarah-maslechko-01.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/bmw/bmw-the-escape-posters-sarah-maslechko-02.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/gtbcards/good-thing-bcards-sarah-maslechko-01.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/gtcatalog/good-thing-catalog-sarah-maslechko-01.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/gtcatalog/good-thing-catalog-sarah-maslechko-02.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/gtcatalog/good-thing-catalog-sarah-maslechko-04.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/gtcatalog/good-thing-catalog-sarah-maslechko-05.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/gtflipbook/good-thing-flipbook-sarah-maslechko-01.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/gtstickers/good-thing-stickers-sarah-maslechko-03.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/mrpiece/mrpiece-sarah-maslechko-01.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/mrpiece/mrpiece-sarah-maslechko-03.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/pingpong/ping-pong-sarah-maslechko-04.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/pingpong/ping-pong-sarah-maslechko-05.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/plantin/plantin-specimen-sarah-maslechko-group-01.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/plantin/plantin-specimen-sarah-maslechko-group-02.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/plantin/plantin-specimen-sarah-maslechko-group-03.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/plantin/plantin-specimen-sarah-maslechko-m-01.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/plantin/plantin-specimen-sarah-maslechko-m-01.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/plantin/plantin-specimen-sarah-maslechko-m-02.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/plantin/plantin-specimen-sarah-maslechko-m-03.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/slurpfest/slurpfest-poster-sarah-maslechko-01.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/superspective/superspective-sarah-maslechko-01.jpg</image:loc>
+  </image:image>
+  <image:image>
+  	<image:loc>http://sarahmaslechko.work/img/superspective/superspective-sarah-maslechko.gif</image:loc>
+  </image:image>
+
+  <lastmod>2018-10-29T12:34:49+00:00</lastmod>
 </url>
 
 

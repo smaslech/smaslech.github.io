@@ -8,9 +8,22 @@ body {
     overflow-y: scroll;
     overflow-x: hidden !important;
 }
+.info-open {
+    overflow: hidden;
+}
+
+#info-modal {
+    display: none;
+}
 
 .album {
     cursor: default;
+}
+
+.info-open #info-modal{
+    display: flex;
+    font-family: 'Favorit';
+    z-index: 3000;
 }
 
 

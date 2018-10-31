@@ -10,6 +10,7 @@
     <link type="text/css" rel="stylesheet" href="css/selected.min.css">
     <link href="img/favicon.ico" rel="icon" type="image/x-icon">
     <script src="js/modernizr.min.js"></script> 
+    <!--<script src="https://code.jquery.com/jquery-2.2.0.min.js" integrity="sha256-ihAoc6M/JPfrIiIeayPE9xjin4UWjsx2mjW/rtmxLM4=" crossorigin="anonymous"></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script> window.jQuery || document.write('<script src="/jq/jquery.js"><\/script>');</script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -20,12 +21,46 @@
       gtag('js', new Date());
       gtag('config', 'UA-127373593-1');
     </script>
-</head> 
+    <style type="text/css">
 
-<body class="album">         
+
+        body {
+            overflow-y: scroll;
+            overflow-x: hidden !important;
+        }
+        body .info{
+            overflow-y: hidden;
+        }
+
+        #myModal {
+            top: 0;
+            left: 0;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            text-align: left;
+            font-weight: inherit;
+            font-style: inherit;
+            font-family: inherit;
+            background-color: white;
+            color: black;
+            padding: .75% 2.25% 1.25% 2.25%;
+            cursor: default;
+        }
+
+        .info #myModal {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body class="album">        
     
     <div class="wrap" id="myContainer">
-        <div class="loader"></div>
             
         <div class="topnav">
             <div class="logo" style="padding-left: 0;"><a href="http://sarahmaslechko.work">SARAH&nbsp;MASLECHKO</a></div>
@@ -33,14 +68,14 @@
             <button class="button" type="button" data-hover="Copy" data-active="Copied!" onclick="copyToClipboard('#email')">
                 <span id="email">hello@sarahmaslechko.work</span>
             </button>
-            <button class="info" id="myBtn" style="padding-right: 0;">Info</button>
-
+            <a class="info info-btn" id="info" data-title="info" href="/info" style="padding-right: 0;"> Info</a>
             <button class=" " id="scroll-top">↑</button>
         </div>
 
         <div class="page-title"></div>
 
-        <div class="page-content">
+        <div class="page-content" id="main-content">
+            <div id="guts">
 
             <div class="wrapper">
 
@@ -93,9 +128,7 @@
                             <div class="mousenav"></div>
                         </div>
                     </div>
-                    <div class="imgcaption">
-                        Experimental type specimen. Saddle&#8209;stitch booklet, 10.5&nbsp;x&nbsp;5.25&nbsp;in. <span>Created at Parsons / Prof. <a href="https://ramongd.com/" target="_blank">Ramon&nbsp;Tejada</a>&nbsp;—&nbsp;2016</span>
-                    </div>
+                
                 </div>
 
                 <div class="project portrait" id="gt-bcards">
@@ -291,11 +324,13 @@
                 </div>
 
                 <div class="modal-bottom" style="position: relative; padding: 200px 0 1.25% 0; color: black;">
-                    <p>Updated 10/24/18 11<span class="blinking-cursor">:</span>46 PM</p><br/><p>©2018</p>
+                    <p>Updated 10/24/18 11<span class="blinking-cursor">:</span>46 PM</p><br/>
+                    <p>©2018</p>
+                </div>
+
                 </div>
 
             </div>
-
         </div>
 
     </div>
@@ -310,7 +345,8 @@
         </div>
     </div>
 
-    <div id="myModal" class="modal is-hidden is-visuallyHidden">
+    <div id="myModal" class="modal">
+
         <div class="modal-content">
             <p>Sarah Maslechko is a graphic designer based in Toronto. She graduated from Parsons School of Design in 2016 and is currently the lead graphic designer at <a class="modal-link" href="https://supergoodthing.com" target="_blank">Good&nbsp;Thing</a>.</p>
             <p style="margin-top:2%;">This is a private page representing an in-depth, curated selection of work. View public portfolio <a class="modal-link" href="http://sarahmaslechko.work">here</a>.</p>
@@ -319,20 +355,22 @@
                 <span id="email">hello@sarahmaslechko.work</span>
             </button>
             <p>+1 437 345 4770</p>
+            <a id="back-link" href="test.html">Back</a>
         </div>
         <div class="modal-bottom">
             <p>Updated 10/24/18 11<span class="blinking-cursor">:</span>46 PM</p><br/><p>©2018</p>
-        </div>
-
-            <div class="albumnav" id="closeModal">
-                <div class="close"></div>
-                <div class="mousenav"></div>
-            </div>
-     
+        </div>     
     </div>
 
+
+    <!--<script src="js/app.min.js"></script>
+    <script src="js/test.js"></script>-->
+
+    <script type="text/javascript" src="js/dynamic.js"></script>
+
+
     <script type="text/javascript">
-        $('.slideshow-container, .modal').mousemove(function(a) {
+        $('.slideshow-container').mousemove(function(a) {
             posX = a.clientX,
             posY = a.clientY,
             $(".mousenav").css({
@@ -342,12 +380,8 @@
         });
     </script>
 
-    <script type="text/javascript">
-        $(window).on('load',function(){ 
-            $(".loader").fadeOut(300); 
-        });
-    </script>
-    <script type="text/javascript">
+
+    <!--<script type="text/javascript">
         $(document).ready(function(){
             $('html').animate({scrollTop:0}, 1);
             $('body').animate({scrollTop:0}, 1);
@@ -374,8 +408,8 @@
           } else {
            document.getElementById('scroll-top').style.display = 'none';
           }
-        }
-    </script>
+        };
+    </script>-->
 
     <script type="text/javascript">
         var slideIndex = [1,1,1,1];
@@ -398,10 +432,10 @@
              x[i].style.display = "none";  
           }
           x[slideIndex[no]-1].style.display = "block";  
-        }
+        };
     </script>
 
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
         var didScroll;
         var lastScrollTop = 0;
         var delta = 5;
@@ -436,45 +470,8 @@
             $('html, body').animate({scrollTop : 0},100);
             return false;
         });
-    </script>
+    </script>-->
 
-    <script type="text/javascript">
-        var modal = document.getElementById('myModal');
-        var body = document.getElementsByTagName('body');
-        var container = document.getElementById('myContainer');
-        var btnOpen = document.getElementById("myBtn");
-        var btnClose = document.getElementById("closeModal");
-        var noscroll = document.getElementById("noscroll")
-
-        btnOpen.onclick = function() {
-            modal.className = "modal is-visuallyHidden";
-            setTimeout(function() {
-                container.className = "wrap is-blurred";
-                modal.className = "modal";
-            }, 0);
-            container.parentElement.className = "album modalOpen";
-            
-            
-        }
-
-        btnClose.onclick = function() {
-            modal.className = "modal is-hidden is-visuallyHidden";
-            body.className = "album";
-            container.className = "wrap ready";
-            container.parentElement.className = "album";
-            
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.className = "modal is-hidden";
-                body.className = "album";
-                container.className = "wrap ready";
-                container.parentElement.className = "album";
-                
-            }
-        }
-    </script>
 
     <script type="text/javascript">
         function copyToClipboard(element) {
@@ -483,7 +480,7 @@
             $temp.val($(element).text()).select();
             document.execCommand("copy");
             $temp.remove();
-        }
+        };
     </script>
 
     <script type="text/javascript">

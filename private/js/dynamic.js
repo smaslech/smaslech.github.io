@@ -1,85 +1,53 @@
-window.onload = function() {
-  var pages = {
-    index: {
-      title: "Test",
-      url: "test",
-      content: ""
-    },
-    about: {
-      title: "Info",
-      url: "info",
-      content: ""
+    var contentEl = document.getElementById('content'),
+        linkEls = document.getElementsByTagName('a'),
+        cats = {
+          fluffy: {
+            content: 'Fluffy!',
+            photo: 'http://placekitten.com/200/200'
+          },
+          socks: {
+            content: 'Socks!',
+            photo: 'http://placekitten.com/280/280'
+          },
+          whiskers: {
+            content: 'Whiskers!',
+            photo: 'http://placekitten.com/350/350'
+          },
+          bob: {
+            content: 'Just Bob.',
+            photo: 'http://placekitten.com/320/270'
+          }
+        };
+
+    // Switcheroo!
+    function updateContent(data) {
+      if (data == null)
+        return;
+
+      contentEl.textContent = data.content;
     }
-  }
 
-  // Get references to the page elements.
-  var navLinks = document.querySelectorAll('.btn');
-  var contentElement = document.getElementById('info-modal');
+    // Load some mock JSON data into the page
+    function clickHandler(event) {
+      var cat = event.target.getAttribute('href').split('/').pop(),
+          data = cats[cat] || null; // In reality this could be an AJAX request
 
+      updateContent(data);
 
-  // Update the page content.
-  var updateContent = function(stateObj) {
-    // Check to make sure that this state object is not null.
-    if (stateObj) {
-      contentElement.innerHTML = stateObj.content;
+      // Add an item to the history log
+      history.pushState(data, event.target.textContent, event.target.href);
+
+      return event.preventDefault();
     }
-  };
 
+    // Attach event listeners
+    for (var i = 0, l = linkEls.length; i < l; i++) {
+      linkEls[i].addEventListener('click', clickHandler, true);
+    }
 
-  // Load the page content via AJAX.
-  var loadContent = function(url, callback) {
-    var request = new XMLHttpRequest();
+    // Revert to a previously saved state
+    window.addEventListener('popstate', function(event) {
+      console.log('popstate fired!');
 
-    request.onload = function(response) {
-      // Save the html in the pages object so that it doesn't need
-      // to be loaded again.
-      pages[url.split('.')[0]].content = response.target.response;
-
-      var pageData = pages[url.split('.')[0]];
-
-      // Update the title and content.
-      updateContent(pageData);
-      
-      // Execute the callback function.
-      callback();
-    };
-
-    request.open('get', '' + url, true);
-    request.send();
-  };
-
-
-  // Attach click listeners for each of the nav links.
-  for (var i = 0; i < navLinks.length; i++) {
-    navLinks[i].addEventListener('click', function(e) {
-      e.preventDefault();
-
-      // Fetch the page data using the URL in the link.
-      var pageURL = this.attributes['href'].value;
-
-      loadContent(pageURL, function() {
-        var pageData = pages[pageURL.split('.')[0]];
-
-        // Create a new history item.
-        history.pushState(pageData, pageData.title, pageURL);
-      });
+      updateContent(event.state);
     });
-  }
-  
-
-  // Update the page content when the popstate event is called.
-  window.addEventListener('popstate', function(event) {
-    updateContent(event.state);
-  });
-
-
-  // Load initial content.
-  loadContent('test.html', function() {
-    // Update this history event so that the state object contains the data
-    // for the homepage.
-    history.replaceState(pages.index, pages.index.title, '');
-  });
-  
-};
-
-

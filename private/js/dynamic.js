@@ -51,3 +51,17 @@
 
       updateContent(event.state);
     });
+
+$(function () {
+
+$("#info").click(function (e) {
+    $('body').addClass("info-open");
+});
+
+$(window).click(function(event) {
+	var target = $( event.target );
+	if ( target.is( "#closeModal" ) ) {
+		$('body').removeClass('info-open')
+	}
+});
+});

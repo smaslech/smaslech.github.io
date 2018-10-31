@@ -2,12 +2,12 @@ window.onload = function() {
   var pages = {
     index: {
       title: "Test",
-      url: "test.html",
+      url: "test",
       content: ""
     },
     about: {
       title: "Info",
-      url: "info.html",
+      url: "info",
       content: ""
     }
   }
@@ -44,7 +44,7 @@ window.onload = function() {
       callback();
     };
 
-    request.open('get', 'pages/' + url, true);
+    request.open('get', '' + url, true);
     request.send();
   };
 

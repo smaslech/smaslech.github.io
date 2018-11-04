@@ -25,28 +25,26 @@
 
 <body class="album" id="open">
 
-    <main><span>
-    <div id="info-modal" class="modal">
-        <div class="modal-content">
-            <p>Sarah Maslechko is a graphic designer based in Toronto. She graduated from Parsons School of Design in 2016 and is currently the lead graphic designer at <a class="modal-link" href="https://supergoodthing.com" target="_blank">Good&nbsp;Thing</a>.</p>
-            <p style="margin-top:2%;">This is a private page representing an in-depth, curated selection of work. View public portfolio <a class="modal-link" href="http://sarahmaslechko.work">here</a>.</p>
-            <p style="margin-top:2%;"><a class="modal-link" href="https://linkedin.com/in/sarahmaslechko" target="_blank">More&nbsp;info </a>&UpperRightArrow;</p><br/>
-            <button class="button modal-link" type="button" data-hover="Copy" data-active="Copied!" onclick="copyToClipboard('#email')" style="color:black; text-align: left;">
-                <span id="email">hello@sarahmaslechko.work</span>
-            </button>
-            <p>+1 437 345 4770</p>
+    <div id="content">
+        <div id="info-modal" class="modal">
+            <div class="modal-content">
+                <p>Sarah Maslechko is a graphic designer based in Toronto. She graduated from Parsons School of Design in 2016 and is currently the lead graphic designer at <a class="modal-link" href="https://supergoodthing.com" target="_blank">Good&nbsp;Thing</a>.</p>
+                <p style="margin-top:2%;">This is a private page representing an in-depth, curated selection of work. View public portfolio <a class="modal-link" href="http://sarahmaslechko.work">here</a>.</p>
+                <p style="margin-top:2%;"><a class="modal-link" href="https://linkedin.com/in/sarahmaslechko" target="_blank">More&nbsp;info </a>&UpperRightArrow;</p><br/>
+                <button class="button modal-link" type="button" data-hover="Copy" data-active="Copied!" onclick="copyToClipboard('#email')" style="color:black; text-align: left;">
+                    <span id="email">hello@sarahmaslechko.work</span>
+                </button>
+                <p>+1 437 345 4770</p>
+            </div>
+            <div class="modal-bottom">
+                <p>Updated 10/24/18 11<span class="blinking-cursor">:</span>46 PM</p><br/><p>©2018</p>
+            </div>
+            <div class="albumnav">
+                <div class="close" id="menu-nav"><a title="Info-Closed" href="test"></a></div>
+                <div class="mousenav"></div>
+            </div>
         </div>
-        <div class="modal-bottom">
-            <p>Updated 10/24/18 11<span class="blinking-cursor">:</span>46 PM</p><br/><p>©2018</p>
-        </div>
-
-        <div class="albumnav">
-            <div class="close" id="menu-nav"><a title="Info-Closed" href="test.html"></a></div>
-            <div class="mousenav"></div>
-        </div>
-    </div>
-    </span>
-    </main>        
+    </div>    
     
     <div class="wrap" id="myContainer">
             
@@ -56,14 +54,13 @@
             <button class="button" type="button" data-hover="Copy" data-active="Copied!" onclick="copyToClipboard('#email')">
                 <span id="email">hello@sarahmaslechko.work</span>
             </button>
-            <a class="info btn" id="info" href="info.html" style="padding-right: 0;"> Info</a>
+            <div id="menu-nav"><a href="info.html" title="Info-Open" style="padding-right: 0;"> Info</a></div>
             <button class=" " id="scroll-top">↑</button>
         </div>
 
         <div class="page-title"></div>
 
         <div class="page-content" id="main-content">
-            <div id="guts">
 
             <div class="wrapper">
 
@@ -314,8 +311,6 @@
                 <div class="modal-bottom" style="position: relative; padding: 200px 0 1.25% 0; color: black;">
                     <p>Updated 10/24/18 11<span class="blinking-cursor">:</span>46 PM</p><br/>
                     <p>©2018</p>
-                </div>
-
                 </div>
 
             </div>

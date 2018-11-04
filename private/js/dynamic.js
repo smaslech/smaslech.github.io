@@ -1,21 +1,35 @@
-var setCurrentPage = function(url) {
-    $('main span').html(url || "/");
-    //$("#menu-nav a[href='" + url + "']").fadeTo(500, 0.3);
-};
+$(function () {
+  var load = function (url) {
+      $.get(url).done(function (data) {
+          $("#content").html(data);
+      })
+  };
 
-$('#menu-nav a').click(function(e){
-    e.preventDefault();
-    var targetUrl = $(this).attr('href'),
-        targetTitle = $(this).attr('title');
-    
-    $("#menu-nav a[href='" + window.location.pathname + "']").fadeTo(500, 1.0);
-    
-    window.history.pushState({url: "" + targetUrl + ""}, targetTitle, targetUrl);
-    setCurrentPage(targetUrl);
+  $(document).on('click', 'a', function (e) {
+      e.preventDefault();
+
+      var $this = $(this),
+          url = $this.attr("href"),
+          title = $this.attr("title");
+
+      history.pushState({
+          url: url,
+          title: title
+      }, title, url);
+
+      document.title = title;
+
+      load(url);
+  });
+
+  $(window).on('popstate', function (e) {
+      var state = e.originalEvent.state;
+      if (state !== null) {
+          document.title = state.title;
+          load(state.url);
+      } else {
+          document.title = 'Home';
+          $("#content").empty();
+      }
+  });
 });
-
-window.onpopstate = function(e) {
-    $("#menu-nav a").fadeTo('fast', 1.0);
-    setCurrentPage(e.state ? e.state.url : null);
-};
-

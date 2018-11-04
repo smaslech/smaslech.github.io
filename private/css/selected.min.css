@@ -12,15 +12,20 @@ body {
     overflow: hidden;
 }
 
-#info-modal {
+/*#info-modal {
     display: none;
-}
+}*/
 
 .album {
     cursor: default;
 }
 
-.info-open #info-modal{
+/*.info-open #info-modal{
+    display: flex;
+    font-family: 'Favorit';
+    z-index: 3000;
+}*/
+#info-modal{
     display: flex;
     font-family: 'Favorit';
     z-index: 3000;

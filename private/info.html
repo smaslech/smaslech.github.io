@@ -23,8 +23,8 @@
     <script type="text/javascript">
         $(function () {
           var load = function (url) {
-              $.get(url).done(function (data) {
-                  $("#content").load(data "#content");
+              $.get(url).done(function () {
+                  $("#content").load("#content");
               })
           };
 
@@ -427,7 +427,7 @@
     </script>
 
     <script async src="js/lazyload.min.js"></script>
-    <script type="text/javascript" src="js/dynamic.js"></script>
+    <!--<script type="text/javascript" src="js/dynamic.js"></script>-->
 
 </body>
 </html>

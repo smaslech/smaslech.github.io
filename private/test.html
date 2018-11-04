@@ -58,17 +58,42 @@
         });
     </script>-->
     <script type="text/javascript">
-        function processAjaxData(response, urlPath){
-            document.getElementById("content").innerHTML = response.html;
-            document.title = response.pageTitle;
-            window.history.pushState({"html":response.html,"pageTitle":response.pageTitle},"", urlPath);
-        }
-        window.onpopstate = function(e){
-            if(e.state){
-            document.getElementById("content").innerHTML = e.state.html;
-            document.title = e.state.pageTitle;
-        }
-    };
+        (function(){
+          "use strict";
+
+          var container = document.querySelector('a'),
+            content = document.querySelector('#content'),
+            defaultTitle = "Select your Ghostbuster!";
+
+          function requestContent(file){
+            $('#content').load(file + '#content');
+          }
+
+          container.addEventListener('click', function(e){
+            if(e.target != e.currentTarget){
+              e.preventDefault();
+              var data = e.target.getAttribute('title'),
+                url = data + ".html";
+              history.pushState(data, null, url);
+              requestContent(url);
+              document.title = "Ghostbuster | " + data;
+            }
+            e.stopPropagation();
+          }, false);
+
+          window.addEventListener('popstate', function(e){
+            var character = e.state;
+
+            if (character == null) {
+              content.innerHTML = " ";
+              document.title = defaultTitle;
+            } else {
+              requestContent(character + ".html");
+              document.title = "Ghostbuster | " + character;
+            }
+          })
+        })();
+
     </script>
 </head>
 
@@ -84,7 +109,7 @@
             <button class="button" type="button" data-hover="Copy" data-active="Copied!" onclick="copyToClipboard('#email')">
                 <span id="email">hello@sarahmaslechko.work</span>
             </button>
-            <div id="menu-nav"><a href="info" title="Info-Open" style="padding-right: 0;"> Info</a></div>
+            <div id="menu-nav"><a href="info" title="info" style="padding-right: 0;"> Info</a></div>
             <button class=" " id="scroll-top">↑</button>
         </div>
 

@@ -1,7 +1,7 @@
 $(function () {
   var load = function (url) {
       $.get(url).done(function (data) {
-          $("#content").load("data #content");
+          $("#content").load(data "#content");
       })
   };
 

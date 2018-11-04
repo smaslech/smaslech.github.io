@@ -10,7 +10,6 @@
     <link type="text/css" rel="stylesheet" href="css/selected.min.css">
     <link href="img/favicon.ico" rel="icon" type="image/x-icon">
     <script src="js/modernizr.min.js"></script> 
-    <!--<script src="https://code.jquery.com/jquery-2.2.0.min.js" integrity="sha256-ihAoc6M/JPfrIiIeayPE9xjin4UWjsx2mjW/rtmxLM4=" crossorigin="anonymous"></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script> window.jQuery || document.write('<script src="/jq/jquery.js"><\/script>');</script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -20,6 +19,43 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-127373593-1');
+    </script>
+    <script type="text/javascript">
+        $(function () {
+          var load = function (url) {
+              $.get(url).done(function (data) {
+                  $("#content").load(data "#content");
+              })
+          };
+
+          $(document).on('click', 'a', function (e) {
+              e.preventDefault();
+
+              var $this = $(this),
+                  url = $this.attr("href"),
+                  title = $this.attr("title");
+
+              history.pushState({
+                  url: url,
+                  title: title
+              }, title, url);
+
+              document.title = title;
+
+              load(url);
+          });
+
+          $(window).on('popstate', function (e) {
+              var state = e.originalEvent.state;
+              if (state !== null) {
+                  document.title = state.title;
+                  load(state.url);
+              } else {
+                  document.title = 'Home';
+                  $("#content").empty();
+              }
+          });
+        });
     </script>
 </head>
 
@@ -312,9 +348,6 @@
     
 
 
-    <script type="text/javascript" src="js/dynamic.js"></script>
-
-
     <script type="text/javascript">
         $('.slideshow-container, .modal').mousemove(function(a) {
             posX = a.clientX,
@@ -325,37 +358,6 @@
             })
         });
     </script>
-
-
-    <!--<script type="text/javascript">
-        $(document).ready(function(){
-            $('html').animate({scrollTop:0}, 1);
-            $('body').animate({scrollTop:0}, 1);
-        });
-    </script>
-
-    <script type="text/javascript">
-        $(window).scroll(function() {
-
-        if ($(this).scrollTop()>55) {
-            $('.page-title').fadeOut(50);
-         }
-        else {
-            $('.page-title').fadeIn(50);
-         }
-     });
-    </script>
-
-    <script type="text/javascript">
-        window.onscroll = function() {myFunction()};
-        function myFunction() {
-          if (window.pageYOffset  > 350) {
-            document.getElementById('scroll-top').style.display = 'block';
-          } else {
-           document.getElementById('scroll-top').style.display = 'none';
-          }
-        };
-    </script>-->
 
     <script type="text/javascript">
         var slideIndex = [1,1,1,1];
@@ -381,44 +383,7 @@
         };
     </script>
 
-    <!--<script type="text/javascript">
-        var didScroll;
-        var lastScrollTop = 0;
-        var delta = 5;
-        var navbarHeight = 200;
-
-        $(window).scroll(function(event){
-            didScroll = true;
-        });
-
-        setInterval(function() {
-            if (didScroll) {
-                hasScrolled();
-                didScroll = false;
-            }
-        }, 250);
-
-        function hasScrolled() {
-            var st = $(this).scrollTop();
-            if(Math.abs(lastScrollTop - st) <= delta)
-                return;
-            if (st > lastScrollTop && st > navbarHeight){
-                $('#scroll-top').css('visibility','hidden');
-            } else {
-                if(st + $(window).height() < $(document).height()) {
-                    $('#scroll-top').css('visibility','visible');
-                }
-            }
-            lastScrollTop = st;
-        }
-
-        $('#scroll-top').click(function(){
-            $('html, body').animate({scrollTop : 0},100);
-            return false;
-        });
-    </script>-->
-
-
+    
     <script type="text/javascript">
         function copyToClipboard(element) {
             var $temp = $("<input>");
@@ -443,6 +408,7 @@
     </script>
 
     <script async src="js/lazyload.min.js"></script>
+    <script type="text/javascript" src="js/dynamic.js"></script>
 
 </body>
 </html>

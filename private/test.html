@@ -319,7 +319,7 @@
               var $this = $(this),
                   url = $this.attr("href"),
                   title = $this.attr("title");
-                  href = $this.attr(("title") + .html)
+                  href = $this.attr("title", function() { return $(this).attr("title") + ".html" });
 
               history.pushState({
                   url: url,

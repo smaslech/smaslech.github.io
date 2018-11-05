@@ -22,7 +22,9 @@
     </script>
     <script type="text/javascript">
         $(function () {
-          
+            loadPage = function(url) {
+                $("#content").load(url + " #info-modal");
+          };
 
           $(document).on('click', '#link', function (e) {
               e.preventDefault();
@@ -37,8 +39,8 @@
               }, title, url);
 
               document.title = title;
+              loadPage(url);
 
-              $("#content").load(url "#info-modal");
           });
 
           $(window).on('popstate', function (e) {

@@ -22,16 +22,15 @@
     </script>
     <script type="text/javascript">
         $(function () {
-          var load = function (url) {
-            $("#content").load("info.html #infocontent");
-          };
+          
 
-          $(document).on('click', 'a', function (e) {
+          $(document).on('click', '#link', function (e) {
               e.preventDefault();
 
               var $this = $(this),
                   url = $this.attr("href"),
                   title = $this.attr("title");
+                  href = title.text(".html")
 
               history.pushState({
                   url: url,
@@ -40,7 +39,7 @@
 
               document.title = title;
 
-              load(url);
+              $("#content").load(href + "#info-modal");
           });
 
           $(window).on('popstate', function (e) {
@@ -69,7 +68,7 @@
             <button class="button" type="button" data-hover="Copy" data-active="Copied!" onclick="copyToClipboard('#email')">
                 <span id="email">hello@sarahmaslechko.work</span>
             </button>
-            <div id="menu-nav"><a href="info" title="info" style="padding-right: 0;"> Info</a></div>
+            <div id="link"><a href="info" title="info" style="padding-right: 0;"> Info</a></div>
             <button class=" " id="scroll-top">↑</button>
         </div>
 

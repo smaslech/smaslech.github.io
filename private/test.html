@@ -20,14 +20,14 @@
       gtag('js', new Date());
       gtag('config', 'UA-127373593-1');
     </script>
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
         $(function () {
-            loadPage = function(url) {
-                $("#content").load(url + " #info-modal");
-          };
 
           $(document).on('click', '#link', function (e) {
               e.preventDefault();
+              var state = $(this).attr('href');
+              var content = $("#content");
+              var load = $("#info-content");
 
               var $this = $(this),
                   url = $this.attr("href"),
@@ -39,7 +39,7 @@
               }, title, url);
 
               document.title = title;
-              loadPage(url);
+              content.load('state load');
 
           });
 
@@ -54,7 +54,8 @@
               }
           });
         });
-    </script>
+    </script>-->
+
 </head>
 
 <body class="album">
@@ -69,7 +70,7 @@
             <button class="button" type="button" data-hover="Copy" data-active="Copied!" onclick="copyToClipboard('#email')">
                 <span id="email">hello@sarahmaslechko.work</span>
             </button>
-            <div id="link"><a href="info" title="info" style="padding-right: 0;"> Info</a></div>
+            <a id="link" href="info" data-title="Info" data-target="info" style="padding-right: 0;"> Info</a>
             <button class=" " id="scroll-top">↑</button>
         </div>
 

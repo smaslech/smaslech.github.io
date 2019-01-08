@@ -1,14 +1,14 @@
-// Source: https://jsfiddle.net/gerardofurtado/2bkkr6g6/3/
-var album_navigation = $('.container')
+// // Source: https://jsfiddle.net/gerardofurtado/2bkkr6g6/3/
+// var album_navigation = $('.container')
 
-// album_navigation.bind('click', show);
-$(document).bind('click', show)
+// // album_navigation.bind('click', show);
+// $(document).bind('click', show)
 
-function show() {
-	var caption = $(".is-selected").children("p").html();
-	console.log(caption)
-	$("#show").html(caption)
-}
+// function show() {
+// 	var caption = $(".is-selected").children("p").html();
+// 	console.log(caption)
+// 	$("#show").html(caption)
+// }
 
 
 function copyToClipboard(element) {
@@ -21,30 +21,56 @@ function copyToClipboard(element) {
 
 
 
-let boxes = Array.from(document.getElementsByClassName('btn'));
+ // $(document).on('click', '#info', function () {
+ //    var modal = $("#myModal")
+ //    modal.toggleClass("open");
+ //  });
 
-function selectBox (id) {
-    boxes.forEach(b => {
-        b.classList.toggle('selected', b.id === id);
-    });
-}
+ $(document).ready(function(){
+    var infoModal = $(".modal")
+    var infoBtn = $("#info")
+     infoBtn.click(function() {
+        infoModal.show();
+        infoModal.addClass("open");
+     });
 
-boxes.forEach(b => {
-    let id = b.id;
-    b.addEventListener('click', e => {
-        history.pushState({id}, `Selected: ${id}`, `./${id}`)
-        selectBox(id);
-
-        if ($("body").hasClass("info-closed")) {
-        	$("body").removeClass("info-closed").addClass("info-open");
-        } else {
-        	$("body").toggleClass("info-closed", true);
-        }
-    });
+     infoModal.click(function(){
+        infoModal.hide();
+        infoModal.removeClass("open");
+     });
 });
 
-window.addEventListener('popstate', e => {
-    selectBox(e.state.id);
-});
+// $(function () {
+    
+//     $(document).on('click', 'a', function (e) {
+//         e.preventDefault();
+        
+//         var $this = $(this),
+//             url = $this.attr("href"),
+//             title = $this.text();
+        
+//         history.pushState({
+//             url: url,
+//             title: title
+//         }, title, url);
 
-history.replaceState({id: null}, 'Default state', './');
+//         document.title = title;
+        
+
+//         if ($("#myModal").hasClass("closed")) {
+//             $("#myModal").removeClass("closed").addClass("open");
+//         } else {
+//             $("#myModal").removeClass("open").addClass("closed")
+//         }
+//     });
+    
+//     $(window).on('popstate', function (e) {
+//         var state = e.originalEvent.state;
+//         if (state !== null) {
+//             document.title = state.title;
+//         } else {
+//             document.title = 'World Regions';
+//             $("#content").empty();
+//         }
+//     });
+// });

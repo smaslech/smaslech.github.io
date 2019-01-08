@@ -16,42 +16,34 @@
 	<script src="js/main.js"></script>
 </head>
 
-<body class="album info-closed">
+<body class="album">
 
 	<div class="wrap" id="myContainer">
 		<!--<div class="loader"></div>-->
 
 		<div class="topnav">
-			<div class="logo" style="padding-left: 0;"><a href="https://sarahmaslechko.work">SARAH&nbsp;MASLECHKO</a></div>
-			<div class="contact" id="phone">+1&nbsp;437&nbsp;345&nbsp;3770</div>
-		  	<button class="button" type="button" data-hover="Copy" data-active="Copied!" onclick="copyToClipboard('#email')">
-		  		<span id="email">hello@sarahmaslechko.work</span>
-		  	</button>
-			<button class="info btn" id="info" style="padding-right: 0;">Info</button>
+			<div class="nav-item" id="logo"><a href="https://sarahmaslechko.work">SARAH&nbsp;MASLECHKO</a></div>
+			<div class="nav-item" id="phone">+1&nbsp;437&nbsp;345&nbsp;3770</div>
+		  	<button class="nav-item" id="email" type="button" data-hover="Copy" data-active="Copied!" onclick="copyToClipboard('#email')"><span id="email">hello@sarahmaslechko.work</span></button>	
+			<button class="nav-item" id="info">Info</button>
 		</div>
 
 		<div id="myModal" class="modal">
-
 			<div class="modal-content">
 		    	<p>Sarah Maslechko is a graphic designer based in Toronto. She graduated from Parsons School of Design in 2016 and is currently the lead graphic designer at <a class="modal-link" href="https://supergoodthing.com" target="_blank">Good&nbsp;Thing</a>.</p>
 		    	<p style="margin-top:2%;">Full portfolio and résumé available upon request.</p>
 		    	<p style="margin-top:2%;"><a class="modal-link" href="https://linkedin.com/in/sarahmaslechko" target="_blank">More&nbsp;info </a>&UpperRightArrow;</p><br/>
-		    	<button class="button modal-link" type="button" data-hover="Copy" data-active="Copied!" onclick="copyToClipboard('#email')" style="color:black; text-align: left;">
-			  		<span id="email">hello@sarahmaslechko.work</span>
-			  	</button>
+		    	<button class="modal-link" id="email" type="button" data-hover="Copy" data-active="Copied!" onclick="copyToClipboard('#email')" style="color:black; text-align: left;"><span id="email">hello@sarahmaslechko.work</span></button>
 		    	<p>+1 437 345 4770</p>
 			</div>
-
 			<div class="modal-bottom">
-		    		<p>Updated 10/12/18 1<span class="blinking-cursor">:</span>14 AM</p><br/><p>©2018</p>
+		    	<p>Updated 10/12/18 1<span class="blinking-cursor">:</span>14 AM</p><br/><p>©2018</p>
 		    </div>
 
-	    	<span id="closeModal" class="close">
-				<div class="album-navigation">
-					<div class="close"></div>
-					<div class="mouse_nav"></div>
-				</div>
-			</span>
+			<div class="album-nav">
+				<div class="close"></div>
+				<div class="mouse"></div>
+			</div>
 
 			<div class="bottomnav">
 				<button class="info" id="myBtn3">Close</button>

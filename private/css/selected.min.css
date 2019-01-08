@@ -348,6 +348,9 @@ video {
     content: '';
     color: #fff;
 }
+.albumnav .mousenav#black::before {
+    color: black;
+}
 .albumnav .prev1,.albumnav .next1 {
     float: left;
     clear: none;

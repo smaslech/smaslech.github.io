@@ -116,7 +116,8 @@ body {
 	font-kerning: normal;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale
+	-moz-osx-font-smoothing: grayscale;
+	cursor: none;
 }
 
 ::selection,
@@ -153,13 +154,13 @@ a:focus {
 	cursor: pointer
 }
 
-.button {
+#email {
 	display: inline-block;
 	position: relative;
 	/*overflow: hidden;*/
 }
 
-.button:before {
+#email:before {
 	position: absolute;
 	width: 100%;
 	opacity: 0;
@@ -170,16 +171,16 @@ a:focus {
 }
 
 @media only screen and (min-width: 831px) {
-	.button:hover:before {
+	#email:hover:before {
 		content: 'Copy';
 		opacity: 100;
 	}
-	.button:active:before {
+	#email:active:before {
 		content: 'Copied!';
 		opacity: 100;
 	}
-	.button:hover span,
-	.button:active span {
+	#email:hover span,
+	#email:active span {
 		opacity: 0;
 		-webkit-transform: scale(0);
 		-moz-transform: scale(0);
@@ -190,11 +191,11 @@ a:focus {
 }
 
 @media only screen and (max-width: 830px) {
-	.button:active:before {
+	#email:active:before {
 		content: 'Copied!';
 		opacity: 100;
 	}
-	.button:active span {
+	#email:active span {
 		opacity: 0;
 		-webkit-transform: scale(0);
 		-moz-transform: scale(0);
@@ -280,18 +281,24 @@ a:focus {
 	mix-blend-mode: difference;
 }
 
-.topnav.contact, 
-.topnav.logo,
-.topnav button {
+.nav-item {
 	padding-left: .75%;
 	padding-right: .75%;
+}
+
+#logo {
+	padding-left: 0;
+}
+
+#info {
+	padding-right: 0;
 }
 
 .modal {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	display: flex;
+	display: none;
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: flex-start;
@@ -302,11 +309,7 @@ a:focus {
 	background-color: white;
 	color: black;
 	padding: .75% 2.25% 1.25% 2.25%;
-	-webkit-transition: all .75s ease;
-    -moz-transition: all .75s ease;
-    -ms-transition: all .75s ease;
-    -o-transition: all .75s ease;
-    transition: all .75s ease;
+    z-index: 9999;
 }
 
 .modal-content {
@@ -329,19 +332,7 @@ a:focus {
 	z-index: 9999;
 	position: relative;
 }
-
-#closeModal {
-	color: black !important;
-}
-
-.modalOpen {
-	overflow: hidden; 
-}
  
-.closed { 
-	display: none; 
-}
-
 .flickity-enabled.is-draggable.flickity-viewport,
 .flickity-enabled.is-draggable.flickity-viewport.is-pointer-down {
 	cursor: default
@@ -542,7 +533,7 @@ a:focus {
 		justify-content: center;
 		padding: 0 3% 5% 3%;
 	}
-	.album .caption {
+	.caption {
 		display: none; 
 	}
 	#two-up {
@@ -618,13 +609,13 @@ a.modal-link:hover {
 	font-family: "Lining", Helvetica, Arial, sans-serif;
 }
 
-.info {
+#info {
 	font-weight: inherit;
 	font-style: inherit;
 	font-family: "Lining", Helvetica, Arial, sans-serif;;
 }
 
-button#myBtn:hover {
+#info:hover {
 	font-family: "Favorit" !important;
 }
 
@@ -632,7 +623,7 @@ button#myBtn:hover {
 /* -----ALBUM NAV CURSOR----- */
 
 .album-nav {
-	display: none;
+	display: block;
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -739,19 +730,11 @@ button#myBtn:hover {
 	cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjbQg61aAAAADUlEQVQYV2P4//8/IwAI/QL/+TZZdwAAAABJRU5ErkJggg=="),none !important
 }
 
-.album {
-	cursor: none;
-}
-
-.album .album-nav {
-	display: block;
-}
-
 @media only screen and (max-width: 1024px) {
 	.carousel.hover {
 		display:none;
 	}
-	.album .album-nav {
+	.album-nav {
 		display:none;
 	}
 }

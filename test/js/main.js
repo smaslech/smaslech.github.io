@@ -20,12 +20,6 @@ function copyToClipboard(element) {
 	}
 
 
-
- // $(document).on('click', '#info', function () {
- //    var modal = $("#myModal")
- //    modal.toggleClass("open");
- //  });
-
  $(document).ready(function(){
     var infoModal = $(".modal")
     var infoBtn = $("#info")

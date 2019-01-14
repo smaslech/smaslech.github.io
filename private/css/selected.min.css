@@ -110,6 +110,13 @@ video {
     padding-top: 1rem;
 }
 
+video#noborder {
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+    padding-top: 0;
+}
+
 .wrapper {
     max-width: 100%;
     margin-right: auto;
@@ -254,7 +261,7 @@ video {
     position: relative;
 }
 
-.slides1, .slides2, .slides3, .slides4 {
+.slides1, .slides2, .slides3, .slides4, .slides5, .slides6 {
     display: none;
 }
 
@@ -341,7 +348,7 @@ video {
     position: fixed;
     width: 100px;
     height: 100px;
-    margin: 0 0 0 -25px;
+    margin: -15px 0 0 -25px;
     pointer-events: none;
 }
 .albumnav .mousenav::before {

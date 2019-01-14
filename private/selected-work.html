@@ -31,7 +31,7 @@
             
         <div class="topnav">
             <div class="logo" style="padding-left: 0;"><a href="http://sarahmaslechko.work">SARAH&nbsp;MASLECHKO</a></div>
-            <div class="contact" id="phone">+1&nbsp;437&nbsp;345&nbsp;3770</div>
+            <div class="contact" id="phone">+1&nbsp;437&nbsp;345&nbsp;4770</div>
             <button class="button" type="button" data-hover="Copy" data-active="Copied!" onclick="copyToClipboard('#email')">
                 <span id="email">hello@sarahmaslechko.work</span>
             </button>
@@ -199,10 +199,22 @@
                 </div>
 
                 <div class="project three4" id="mrpiece">
-                    <img data-src="img/mrpiece-sarah-maslechko-02.jpg" class="lazy">
+                    <div class="slideshow-container">
+                        <div class="slides5">
+                            <img data-src="img/2/mrpiece-sarah-maslechko-10.jpg" class="lazy">
+                        </div>
+                        <div class="slides5">
+                            <img src="img/2/mrpiece-sarah-maslechko-02.jpg">
+                        </div>
+                        <div class="albumnav">
+                            <div class="prev1" onclick="plusSlides(-1, 4)"></div>
+                            <div class="next1" onclick="plusSlides(1, 4)"></div>
+                            <div class="mousenav"></div>
+                        </div>
+                    </div>
                     <div class="imgcaption">
                         OOH posters for Mr. Piece. <span>Created at Parsons / Prof. <a href="https://www.blondes.nyc/" target="_blank">Brad&nbsp;Blondes,</a> <a href="https://www.frankcollective.com/" target="_blank">Mike&nbsp;Wasilewski</a>&nbsp;—&nbsp;2016</span>
-                    </div> 
+                    </div>
                 </div> 
 
                 <div class="project three4" id="bmw">
@@ -380,12 +392,13 @@
     </script>
 
     <script type="text/javascript">
-        var slideIndex = [1,1,1,1];
-        var slideId = ["slides1", "slides2", "slides3", "slides4"]
+        var slideIndex = [1,1,1,1,1];
+        var slideId = ["slides1", "slides2", "slides3", "slides4", "slides5"]
         showSlides(1, 0);
         showSlides(1, 1);
         showSlides(1, 2);
         showSlides(1, 3);
+        showSlides(1, 4);
 
         function plusSlides(n, no) {
           showSlides(slideIndex[no] += n, no);

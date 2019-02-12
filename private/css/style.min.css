@@ -50,24 +50,46 @@ button {
     font-family: inherit;
 }
 
+/*@font-face {
+    font-family: "Favorit";
+    font-style: normal;
+    font-weight: normal;
+    src:url("assets/Favorit-Regular.woff") format("woff"), 
+        url("assets/Favorit-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Lining";
+    font-style: normal;
+    font-weight: normal;
+    src:url("assets/FavoritLining-Regular.woff") format("woff"),
+        url("assets/FavoritLining-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Light";
+    font-style: normal;
+    font-weight: normal;
+    src:url("assets/Favorit-Light.woff") format("woff"),
+        url("assets/Favorit-Light.woff2") format("woff2");
+}*/
+
 @font-face {
     font-family: "Favorit";
     font-style: normal;
-    src: url("assets/favorit-regular.eot") format("embedded-opentype");
     src: url("assets/Favorit-Regular.woff2") format("woff2"), url("assets/Favorit-Regular.woff") format("woff");
 }
 
 @font-face {
     font-family: "Lining";
     font-style: normal;
-    src:  url("assets/favorit-regular-lining.eot") format("embedded-opentype");
     src: url("assets/FavoritLining-Regular.woff2") format("woff2"), url("assets/FavoritLining-Regular.woff") format("woff");
 }
 
 @font-face {
     font-family: "Light";
     font-style: normal;
-    src: url("assets/Favorit_Light.woff") format("woff");
+    src: url("assets/Favorit-Light.woff2") format("woff2"), url("assets/Favorit-Light.woff") format("woff");
 }
 
 *,*:after,*:before {
@@ -254,7 +276,7 @@ a,a:hover,a:visited,a:focus {
     color: #fff;
     display: inline-flex;
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
     text-align: center;
     font-weight: inherit;

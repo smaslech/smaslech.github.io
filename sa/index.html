@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Test</title>
+	<link href="css/main2.css" rel="stylesheet">
+</head>
+
+<body>
+	<main> 
+		<div class="wrap">
+			<header>
+				<p><span id="header"><b><a href="">SAM ANDERSON </a></b>is a Toronto based product deisgner.</p>	
+			</header>
+
+			<!-- <div class="image">
+				<img src="images/sa-08.jpg">
+			</div> -->
+				
+			<section class="nav">
+				<p><button id="about"><b>About,</b></button><button id="contact"><b> Contact</b></button></p>
+			</section>
+			<section class="info">
+				<p id="info-about">Fascinated by color, optics, and geometry, Sam investigates the ways in which form and pattern affect the utility of our built environment. Sam’s portfolio and CV are available <b><a href="mailto:sam@samanderson.studio">upon request.</a></b></p>
+
+				<p id="info-contact">Sam is interested in working with forward-thinking brands to bring meaningful objects to ordinary people. Get in touch <b><a href="mailto:sam@samanderson.studio">here</a></b> or follow <b><a href="https://www.instagram.com/samanderson.studio/" target="_blank">@samanderson.studio</a></b> for occasional work updates.</p>
+			</section>
+		</div>
+	</main>
+	
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$( window ).on( "load", function() {
+        $('.info').hide();
+    });
+
+
+	$("#about").click(function() {
+	    $('html, body').animate({
+	        scrollTop: $(".nav").offset().top
+	    }, 400, 'swing');
+	    $('.info').show();
+	    $('#info-about').show();
+	    $('#info-contact').hide();
+	    });
+
+	$("#contact").click(function() {
+	    $('html, body').animate({
+	        scrollTop: $(".nav").offset().top
+	    }, 400, 'swing');
+	    $('.info').show();
+	    $('#info-contact').show();
+	    $('#info-about').hide();
+	    });
+	</script>
+<script>
+	window.onscroll = function() {
+	    var doc = document.documentElement;
+	    var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+	    if(top <= 99) {
+	       jQuery("button").addClass('reset');
+	       // $('.info').hide();
+	    }
+	    else {
+	       jQuery("button").removeClass('reset');
+	    }
+	}
+</script>
+
+</body>
+
+</html>

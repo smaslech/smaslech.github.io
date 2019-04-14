@@ -1,0 +1,205 @@
+@font-face {
+    font-family: Canela;
+    font-style: normal;
+    font-weight: bold;
+    src: url("fonts/HelveticaNeueLTStd-Roman.woff2") format("woff2");
+}
+@font-face {
+    font-family: Canela;
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/633e3431631c8c89d187b01e735489a6.woff") format("woff");
+}
+
+html,
+body {
+    font-size: 100%;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    width: 100%;
+    height: 100vh;
+    /*overflow: hidden;*/
+    background-color: #f9f8f7;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display: block
+}
+
+body {
+    line-height: 1;
+    font: 400 18px/1 "Canela", Times New Roman, serif;
+    /*color: #004627;*/
+    /*background-color: #f9f9fb;*/
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-font-smoothing: antialiased;
+    font-variant-ligatures: discretionary-ligatures;
+    /*font-variant-numeric: oldstyle-nums;
+    -moz-font-feature-settings: 'onum';
+    -webkit-font-feature-settings: 'onum';
+    font-feature-settings: 'onum' on;*/
+}
+
+/*font-family: HelveticaNeue;
+font-size: 30px;
+color: #000000;
+text-align: left;
+line-height: 40px;*/
+
+
+p {
+    font-size: 5.5vw;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    display: inline-block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+main {
+    height: calc(100vh - 5em);
+    padding: 2.5em;
+}
+
+.wrap {
+    /*display: flex;
+    justify-content: space-between;
+    flex-direction: column;*/
+    /*height: 100%;*/
+    width: 80%;
+    height: 100%;
+}
+
+header {
+    padding-bottom: 45%;
+}
+
+
+.nav {
+    padding-bottom: 2.5em;
+    
+}
+.nav p{
+    font-size: 2vw;
+    line-height: unset;
+    margin-left: 2.5em;
+}
+
+.nav button:hover {
+    filter: blur(30px);
+    color: pink;
+    box-shadow: 0px 0px 50px 10px pink;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+a:hover {
+    filter: blur(40px);
+    color: pink;
+    box-shadow: 0px 0px 50px 10px pink;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+/*a:hover {
+    color: inherit;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    -webkit-animation-name: example;
+    -webkit-animation-duration: 1s; 
+    animation-name: example;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes example {
+    0%   {
+        filter: blur(0px);
+        color: #000000ad;
+        box-shadow: 0px 0px 0px 0px #f9f8f7;
+    }
+    100% {
+        filter: blur(40px);
+        color: #00000000;
+        box-shadow: 0px 0px 50px 10px pink;
+    }
+}
+@keyframes example {
+    0%   {
+        filter: blur(0px);
+        color: #000000ad;
+        box-shadow: 0px 0px 0px 0px #f9f8f7;
+    }
+    100% {
+        filter: blur(40px);
+        color: #00000000;
+        box-shadow: 0px 0px 50px 10px pink;
+    }
+}*/
+
+.info {
+    height: 85vh;
+}
+
+.image {
+    position: absolute;
+    top: 23vh;
+    display: inline-block;
+    box-shadow: 20px 10px 70px 10px #80808087;
+    z-index: 1;
+    opacity: 1;
+}
+
+.image:hover {
+    opacity: 0.7;
+}
+
+.image > img {
+    height: 60vh;
+}
+
+img {
+    display: block;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  text-align: inherit;
+  text-decoration: none;
+  padding-right: 5px;
+}
+
+button:focus {
+  color: black;
+  border-color: transparent;
+  background-color: inherit;
+  color: black;
+  border-color: transparent;
+  background-color: inherit;
+  outline-color: transparent;
+  outline-style: none;
+  outline-width: 0;
+  text-transform: uppercase;
+}
+
+button.reset:focus {
+    text-transform: capitalize;
+}
